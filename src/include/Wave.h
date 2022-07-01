@@ -5,11 +5,14 @@
 
 class Wave{
     public:
-        Wave(float frequency, float duration, float volume);
+        Wave();
+        void init(float frequency, float duration, float volume);
         ~Wave();
-        bool writeWave(std::string filepath);
+        bool writeWave();
+        bool appendWave();
     private:
         float m_frequency, m_duration, m_volume;
+        std::string m_filepath;
         float step = 0.03;
         float* samples;
 };
