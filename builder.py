@@ -53,7 +53,7 @@ def check_file_updated(long_filename):
     md5 = hashlib.md5(contents).hexdigest()
     if long_filename in md5s.keys():
         if md5s[long_filename] == md5:
-            print(colored('[LOG\t', 'blue') ,'File not updated: ' + long_filename)
+            print(colored('[LOG]\t', 'blue') ,'File not updated: ' + long_filename)
             return False
         else:
             print(colored('[INFO]\t', 'yellow'), 'File updated: ' + long_filename)
